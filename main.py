@@ -30,7 +30,7 @@ from kivy.animation import Animation
 from kivy.clock import Clock
 '''Changelog: 1) Added Wrath of Ashardalon, 2) Changes to tools and deck changes, 3) Added Treasure Tokens, 
 4) Monster Tokends and level up system changed, 5) Sound effects added, 6) Much more...
-7) Experimental TOEE Added'''
+7) Experimental TOEE/Ravenloft Added'''
 
 RESOLUTION_CHOICE = (1280,720)
 def get_resolution():
