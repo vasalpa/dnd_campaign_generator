@@ -29,7 +29,8 @@ from kivy.uix.accordion import Accordion, AccordionItem
 from kivy.animation import Animation
 from kivy.clock import Clock
 '''Changelog: 1) Added Wrath of Ashardalon, 2) Changes to tools and deck changes, 3) Added Treasure Tokens, 
-4) Monster Tokends and level up system changed, 5) Sound effects added, 6) Much more...'''
+4) Monster Tokends and level up system changed, 5) Sound effects added, 6) Much more...
+7) Experimental TOEE Added'''
 
 RESOLUTION_CHOICE = (1280,720)
 def get_resolution():
@@ -273,10 +274,10 @@ villain.content = villain_grid
 
 #Choose Board games Pop-up
 board_games = Popup(title='Select Board Games:', separator_color=[0, 100 / 255, 0, 1], size_hint=(.75, .75),title_align='center')
-castle_raven = ToggleButton(text='Castle Ravenloft',background_color=(0,1,1,1),disabled=True)
+castle_raven = ToggleButton(text='Castle Ravenloft',background_color=(0,1,1,1))
 wrath_ashard = ToggleButton(text='Wrath of Ashardalon',background_color=(0,1,1,1))
 legend_drizzt = ToggleButton(text='The Legend of Drizzt',background_color=(0,1,1,1))
-temple_evil = ToggleButton(text='Temple of Elemental Evil',background_color=(0,1,1,1),disabled=True)
+temple_evil = ToggleButton(text='Temple of Elemental Evil',background_color=(0,1,1,1))
 tomb_an = ToggleButton(text='Tomb of Annihilation',background_color=(0,1,1,1),disabled=True)
 mad_mage = ToggleButton(text='Waterdeep - Dungeon of the Mad Mage',background_color=(0,1,1,1))
 grid_board = GridLayout(cols=1)
@@ -519,7 +520,11 @@ class MyUI(FloatLayout):
             self.campaign_two()
 
     def campaign_two(self):
-        global CP_TAVERNS, PARTICIPANTS, ALLY, ALL_HEROES, SLAY_MONSTERS, SAVE_INNOCENT, RECLAIM_ITEM, DESTROY_ITEM, SLAY_VILLAINS, SLAY_BOSSES, SLAY_MONSTERS_TXT, SAVE_INNOCENT_TXT, RECLAIM_ITEM_TXT, DESTROY_ITEM_TXT, SLAY_VILLAINS_EASY_TXT, SLAY_VILLAINS_HARD_TXT, SAVE_ALLY_TXT, SPECIFIC_TILES, MAGE_SPECIFIC, CAVERN_SPECIFIC, DRIZZT_SPECIFIC, EXTRA_TILES_DRIZZT, EXTRA_TILES_MAGE, EXTRA_TILES_CAVERN, CURRENT_ADV, SAVE_ALLY
+        global CP_TAVERNS, PARTICIPANTS, ALLY, ALL_HEROES, SLAY_MONSTERS, SAVE_INNOCENT, RECLAIM_ITEM, DESTROY_ITEM, \
+            SLAY_VILLAINS, SLAY_BOSSES, SLAY_MONSTERS_TXT, SAVE_INNOCENT_TXT, RECLAIM_ITEM_TXT, DESTROY_ITEM_TXT, \
+            SLAY_VILLAINS_EASY_TXT, SLAY_VILLAINS_HARD_TXT, SAVE_ALLY_TXT, SPECIFIC_TILES, MAGE_SPECIFIC, \
+            CAVERN_SPECIFIC, DRIZZT_SPECIFIC, EXTRA_TILES_DRIZZT, EXTRA_TILES_MAGE, EXTRA_TILES_CAVERN, CURRENT_ADV, \
+            SAVE_ALLY, TOEE_SPECIFIC, EXTRA_TILES_TOEE, RAVENLOFT_SPECIFIC, EXTRA_TILES_RAVENLOFT
 
         difficulty_sel.dismiss()
         board_games.dismiss()
@@ -551,7 +556,11 @@ class MyUI(FloatLayout):
         #                'Marcon', 'Cormac', 'Nayeli', 'Trosper']
         #Lets see if we can make players choose if they want to
         self.hero_buttons = []
-        if self.num_boards == 3:
+        if self.num_boards == 5:
+            self.another_grid = GridLayout(cols=5, size=(prompt_heroes.width, prompt_heroes.height))
+        elif self.num_boards == 4:
+            self.another_grid = GridLayout(cols=4, size=(prompt_heroes.width, prompt_heroes.height))
+        elif self.num_boards == 3:
             self.another_grid = GridLayout(cols=3, size=(prompt_heroes.width, prompt_heroes.height))
         else:
             self.another_grid = GridLayout(cols=2,size=(prompt_heroes.width, prompt_heroes.height))
@@ -578,7 +587,8 @@ class MyUI(FloatLayout):
             SLAY_VILLAINS, SLAY_BOSSES, SLAY_MONSTERS_TXT, SAVE_INNOCENT_TXT, RECLAIM_ITEM_TXT, DESTROY_ITEM_TXT, \
             SLAY_VILLAINS_EASY_TXT, SLAY_VILLAINS_HARD_TXT, SAVE_ALLY_TXT, SPECIFIC_TILES, MAGE_SPECIFIC, CAVERN_SPECIFIC, \
             DRIZZT_SPECIFIC, EXTRA_TILES_DRIZZT, EXTRA_TILES_MAGE, EXTRA_TILES_CAVERN, CURRENT_ADV, SAVE_ALLY, \
-            ASHARDALON_SPECIFIC, CHAMBER_RANDOM_TXT
+            ASHARDALON_SPECIFIC, CHAMBER_RANDOM_TXT, TOEE_SPECIFIC, EXTRA_TILES_TOEE, RAVENLOFT_SPECIFIC, \
+            EXTRA_TILES_RAVENLOFT
         self.lvl.text = ''
         self.heroes.text = ''
         self.rect.source = backImages_list[0]
@@ -695,6 +705,30 @@ class MyUI(FloatLayout):
         elif tilesets[0] == 'Dungeon (Ashardalon)':
             trigger_tile = choice(ASHARDALON_SPECIFIC)
             extra_trigger_tile = ''
+        elif tilesets[0] == 'Dungeon (Castle Ravenloft)':
+            trigger_tile = choice(RAVENLOFT_SPECIFIC)
+            extra_trigger_tile = choice(EXTRA_TILES_RAVENLOFT)
+        elif tilesets[0] == 'Dungeon (ToEE)':
+            if self.slay_villain_choice.startswith('Fire Elemental (Villain)'):
+                trigger_tile = 'Fire Altar'
+            elif self.slay_villain_choice.startswith('Water Elemental (Villain)'):
+                trigger_tile = 'Water Altar'
+            elif self.slay_villain_choice.startswith('Earth Elemental (Villain)'):
+                trigger_tile = 'Earth Altar'
+            elif self.slay_villain_choice.startswith('Air Elemental (Villain)'):
+                trigger_tile = 'Air Altar'
+            else:
+                trigger_tile = choice(TOEE_SPECIFIC)
+            if trigger_tile == 'Fire Altar':
+                extra_trigger_tile = 'Elemental Fire Node'
+            elif trigger_tile == 'Water Altar':
+                extra_trigger_tile = 'Elemental Water Node'
+            elif trigger_tile == 'Earth Altar':
+                extra_trigger_tile = 'Elemental Earth Node'
+            elif trigger_tile == 'Air Altar':
+                extra_trigger_tile = 'Elemental Air Node'
+            else:
+                extra_trigger_tile = choice(EXTRA_TILES_TOEE)
 
         if CURRENT_ADV == 'CHAMBER_RANDOM':
             trigger_tile = choice(ASHARDALON_SPECIFIC)
@@ -957,6 +991,30 @@ class MyUI(FloatLayout):
         elif tilesets[0] == 'Dungeon (Ashardalon)':
             trigger_tile = choice(ASHARDALON_SPECIFIC)
             extra_trigger_tile = ''
+        elif tilesets[0] == 'Dungeon (Castle Ravenloft)':
+            trigger_tile = choice(RAVENLOFT_SPECIFIC)
+            extra_trigger_tile = choice(EXTRA_TILES_RAVENLOFT)
+        elif tilesets[0] == 'Dungeon (ToEE)':
+            if self.slay_villain_choice.startswith('Fire Elemental (Villain)') and CURRENT_ADV == SLAY_VILLAINS:
+                trigger_tile = 'Fire Altar'
+            elif self.slay_villain_choice.startswith('Water Elemental (Villain)') and CURRENT_ADV == SLAY_VILLAINS:
+                trigger_tile = 'Water Altar'
+            elif self.slay_villain_choice.startswith('Earth Elemental (Villain)') and CURRENT_ADV == SLAY_VILLAINS:
+                trigger_tile = 'Earth Altar'
+            elif self.slay_villain_choice.startswith('Air Elemental (Villain)') and CURRENT_ADV == SLAY_VILLAINS:
+                trigger_tile = 'Air Altar'
+            else:
+                trigger_tile = choice(TOEE_SPECIFIC)
+            if trigger_tile == 'Fire Altar':
+                extra_trigger_tile = 'Elemental Fire Node'
+            elif trigger_tile == 'Water Altar':
+                extra_trigger_tile = 'Elemental Water Node'
+            elif trigger_tile == 'Earth Altar':
+                extra_trigger_tile = 'Elemental Earth Node'
+            elif trigger_tile == 'Air Altar':
+                extra_trigger_tile = 'Elemental Air Node'
+            else:
+                extra_trigger_tile = choice(EXTRA_TILES_TOEE)
 
         if CURRENT_ADV == 'CHAMBER_RANDOM':
             trigger_tile = choice(ASHARDALON_SPECIFIC)
@@ -1014,7 +1072,8 @@ class MyUI(FloatLayout):
     def setting_adv(self):
 
         global CAVERN_SPECIFIC, MAGE_SPECIFIC, DRIZZT_SPECIFIC, EXTRA_TILES_DRIZZT, EXTRA_TILES_MAGE, SLAY_MONSTERS, \
-            SAVE_INNOCENT, SAVE_ALLY, RECLAIM_ITEM, DESTROY_ITEM, SLAY_VILLAINS, SLAY_BOSSES, ASHARDALON_SPECIFIC
+            SAVE_INNOCENT, SAVE_ALLY, RECLAIM_ITEM, DESTROY_ITEM, SLAY_VILLAINS, SLAY_BOSSES, ASHARDALON_SPECIFIC, \
+            TOEE_SPECIFIC, EXTRA_TILES_TOEE, RAVENLOFT_SPECIFIC, EXTRA_TILES_RAVENLOFT
         self.all_heroes.clear()
         self.tilesets.clear()
         self.items.clear()
@@ -1075,15 +1134,55 @@ class MyUI(FloatLayout):
             self.bosses.update(['Ashardalon, Red Dragon', 'Bellax, Gauth', 'Rage Drake'])
             self.monster_types.update(['Orc', 'Reptile'])
 
+        # ----- TOEE Variables Start here ------
+        if temple_evil.state == 'down':
+            # Check if TOEE Board Game is enabled so we enable certain sets
+            self.all_heroes.update(['Talon', 'Nymmestra', 'Barrowin', 'Ratshadow', 'Alaeros'])
+            self.tilesets.update(['Dungeon (ToEE)'])
+            self.items.update(['Cloak of Protection', 'Flame Tongue', 'Frost Brand', 'Horn of Blasting'])
+            self.villains_easy.update(
+                ['Water Elemental (Villain)[EASY]', 'Air Elemental (Villain)[EASY]', 'Fire Elemental (Villain)'\
+                '[EASY]', 'Earth Elemental (Villain)[EASY]'])
+            self.villains_normal.update(
+                ['Water Elemental (Villain)[NORMAL]', 'Air Elemental (Villain)[NORMAL]', 'Fire Elemental (Villain)'\
+                '[NORMAL]', 'Earth Elemental (Villain)[NORMAL]'])
+            self.villains_hard.update(
+                ['Water Elemental (Villain)[HARD]', 'Air Elemental (Villain)[HARD]', 'Fire Elemental (Villain)'\
+                '[HARD]', 'Earth Elemental (Villain)[HARD]'])
+            self.bosses.update(['Velathidros, Black Dragon', 'Swerglemergle, Ettin', 'Arkaschic Thunn, Salamander'])
+            self.monster_types.update(['Human', 'Elemental'])
+
+        # ----- Ravenloft Variables Start here ------
+        if castle_raven.state == 'down':
+            # Check if Ravenloft Board Game is enabled so we enable certain sets
+            self.all_heroes.update(['Immeril', 'Allisa', 'Arjhan', 'Kat', 'Thorgrim'])
+            self.tilesets.update(['Dungeon (Castle Ravenloft)'])
+            self.items.update(['Crystal Ball'])
+            self.villains_easy.update(['Klak, Kobold Sorcerer[EASY]', 'Howling Hag[EASY]', 'Werewolf[EASY]',\
+                                       'Zombie Dragon[EASY]', 'Young Vampire[EASY]'])
+            self.villains_normal.update(['Klak, Kobold Sorcerer[NORMAL]', 'Howling Hag[NORMAL]',
+            'Werewolf[NORMAL]', 'Zombie Dragon[NORMAL]', 'Young Vampire[NORMAL]'])
+            self.villains_hard.update(['Klak, Kobold Sorcerer[HARD]', 'Howling Hag[HARD]',
+            'Werewolf[HARD]', 'Zombie Dragon[HARD]', 'Young Vampire[HARD]'])
+            self.bosses.update(['Gravestorm, Dracolich', 'Flesh Golem', 'Count Strahd Von Zarovich'])
+            self.monster_types.update(['Undead', 'Animal'])
+
         self.num_boards = [castle_raven.state, wrath_ashard.state, legend_drizzt.state, temple_evil.state,
                            tomb_an.state, mad_mage.state].count('down')
         # Cases Sector
         ASHARDALON_SPECIFIC = ['Dire Chamber Entrance', 'Horrid Chamber Entrance']
         CAVERN_SPECIFIC = ['Cavern of Ooze', 'Halaster\'s Rune', 'The Runestone']
         MAGE_SPECIFIC = ['Graves', 'Underground River', 'The Gauntlet', 'The Ossuary']
+        TOEE_SPECIFIC = ['Oubliette', 'Fire Altar', 'Pool of Olhydra', 'Guard Room', 'Water Altar', 'Earth Altar'\
+                         ,'Air Altar', 'Massacre Site', 'Furnace Room']
+        RAVENLOFT_SPECIFIC = ['Rotting Nook', 'Fetid Den', 'Arcane Circle', 'Dark Fountain', 'Secret Stairway',\
+        'Chapel', 'Workshop', 'Laboratory']
         DRIZZT_SPECIFIC = ['Dark Chasm', 'Underground River (Drizzt)', 'Crystal Shard', 'Drow Glyph', 'Broken Door']
         EXTRA_TILES_DRIZZT = ['Ancient Throne', 'Rocky Lair']
         EXTRA_TILES_MAGE = ['Mirror Gate / Arch Gate', 'Shadowdusk Hold / Arch Gate']
+        EXTRA_TILES_TOEE = ['Elemental Air Node', 'Elemental Water Node', 'Elemental Fire Node', 'Elemental Earth Node']
+        EXTRA_TILES_RAVENLOFT = ['Lonely Crypt', 'King\'s Crypt', 'Ireena Kolyana\'s Crypt', 'Stahd\'s Crypt',\
+        'Crypt of Barov and Ravenovia', 'Crypt of Sergei Von Zarovich', 'Crypt of Artimus', 'Prince Aurel\'s Crypt']
         SLAY_MONSTERS = list(self.monster_types)
         SAVE_INNOCENT = ['Mark', 'Roy', 'Dave', 'Dianna', 'Gabel', 'Joe']
         RECLAIM_ITEM = list(self.items)
