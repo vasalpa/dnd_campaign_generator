@@ -29,10 +29,10 @@ from kivy.uix.accordion import Accordion, AccordionItem
 from kivy.animation import Animation
 from kivy.clock import Clock
 '''Changelog: 1) Added Wrath of Ashardalon, 2) Changes to tools and deck changes, 3) Added Treasure Tokens, 
-4) Monster Tokends and level up system changed, 5) Sound effects added, 6) Much more...
+4) Monster Tokens and level up system changed, 5) Sound effects added, 6) Much more...
 7) Experimental TOEE/Ravenloft Added'''
 
-RESOLUTION_CHOICE = (1280,720)
+RESOLUTION_CHOICE = (1280, 720)
 def get_resolution():
     try:
         global RESOLUTION_CHOICE
@@ -230,7 +230,32 @@ some_text = '[size=22sp][b]Wrath of Ashardalon[/b][' \
             'color=#edde37][NORMAL][/color]: Same as Card.\n[color=#ff0000][HARD][/color]: AC:17, HP:20, ' \
             'Tactics: 1) TAIL SWEEP: 2 DMG + EFFECT, 2) BITE: 2DMG + EFFECT.\n[color=#ae0606][EXTREME][/color]: ' \
             'AC: 18, HP:27, TACTICS: 1) TAIL SWEEP: +12, 2 DMG + EFFECT, 2) BITE: +12, 2DMG + EFFECT.' \
-            '\n\n[size=22sp][b]The Legend of Drizzt[/b][/size]\n\n[size=18sp][color=#c138e7][b][u]1) Errtu, ' \
+            '\n\n[size=18sp][color=#c138e7][b][u]2) Bellax, ' \
+            'Gauth[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: Same as Card.\n[' \
+            'color=#edde37][NORMAL][/color]: AC:17, HP:14, TACTICS: Same as Card.\n[color=#ff0000][HARD][/color]: ' \
+            'AC:17, HP:20, TACTICS: + 1 DMG TO ALL TACTICS.\n[color=#ae0606][EXTREME][/color]: ' \
+            'AC:18, HP:24, TACTICS: +1 DMG TO ALL TACTICS, +10 ATTACK TO ALL TACTICS.' \
+            '\n\n[size=18sp][color=#c138e7][b][u]3) Rage ' \
+            'Dragon[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: Same as Card.\n[' \
+            'color=#edde37][NORMAL][/color]: RAGED: AC:14, HP:9, TACTICS: SAME AS CARD, ENRAGED RAGE: AC:16, HP:12, ' \
+            'TACTICS: Same as Card.\n[color=#ff0000][HARD][/color]: ' \
+            'RAGED: AC:14, HP:11, TACTICS: BITE: 2DMG + EFF, CHARGE: 2DMG + DAZED, ENRAGED RAGE: AC: 16, HP:14, ' \
+            'TACTICS: CLAWS: 3DMG + EFF.\n[color=#ae0606][EXTREME][/color]: ' \
+            'RAGED: AC:15, HP:12, TACTICS: BITE: 2DMG + EFF, CHARGE: 2DMG + DAZED, ENRAGED RAGE: AC: 17, HP:16, TACTICS: CLAWS: 3DMG + EFF.' \
+            '\n\n[size=18sp][color=#229fed][u]4) Kraash, Orc Storm Shaman[/u][' \
+            '/color][/size]\n[color=#1fed2d][EASY][/color]: Same as Card.\n[color=#edde37][' \
+            'NORMAL][/color]: AC:15, HP:10, TACTICS: Same as Card.\n[color=#ff0000][HARD][/color]: AC:16, HP:14, TACTICS: WINDSTORM: 2DMG + EFF, LIGHTNING: 2DMG + EFF\n\n[' \
+            'size=18sp][color=#229fed][u]5) Meerak, Kobold Dragonlord[/u][/color][/size]\n[color=#1fed2d][EASY][/color]: ' \
+            'Same as Card.\n[color=#edde37][NORMAL][/color]: AC:18, HP:9, TACTICS: Same as Card.\n[color=#ff0000][' \
+            'HARD][/color]: AC:18, HP:12, TACTICS: SHORT SWORD: 3DMG.\n\n[' \
+            'size=18sp][color=#229fed][u]6) Margrath, Duergar Captain[/u][/color][/size]\n[color=#1fed2d][EASY][' \
+            '/color]: ' \
+            'Same as Card.\n[color=#edde37][NORMAL][/color]: AC:17, HP:11, TACTICS: Same as Card.\n[color=#ff0000][' \
+            'HARD][/color]: AC:18:, HP:14, TACTICS: MORNING STAR: 2DMG + EFF, QUILLS: 2DMG + EFF.\n\n[' \
+            'size=18sp][color=#229fed][u]7) Otyugh[/u][/color][/size]\n[color=#1fed2d][EASY][' \
+            '/color]: ' \
+            'Same as Card.\n[color=#edde37][NORMAL][/color]: AC:15, HP: 14, TACTICS: Same as Card.\n[color=#ff0000][' \
+            'HARD][/color]: AC:16, HP:17, TACTICS: TENTACLE: 2DMG + EFF.\n\n[size=22sp][b]The Legend of Drizzt[/b][/size]\n\n[size=18sp][color=#c138e7][b][u]1) Errtu, ' \
             'Balor[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: AC:14, HP:10, Tactics: Same as Card.\n[' \
             'color=#edde37][NORMAL][/color]: Same as Card.\n[color=#ff0000][HARD][/color]: AC:16, HP:25, ' \
             'Tactics: 1) SWORD: +10 + IMMOBILIZED, 2) WHIP: +9, 2DMG + EFFECT.\n[color=#ae0606][EXTREME][/color]: AC: 17, HP:28, TACTICS: 1) SWORD: +11 + IMMOBILIZED, 2) WHIP: +10, 2DMG + EFFECT.' \
