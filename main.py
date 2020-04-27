@@ -1560,7 +1560,7 @@ class DnDGenerator(App):
 
     def build(self):
         self.icon = 'icon.ico'
-        self.title = 'Dungeons & Dragons Campaign Generator'
+        self.title = 'D&D Adventure Board Games - Campaign Generator'
         return MyUI()
 
 
