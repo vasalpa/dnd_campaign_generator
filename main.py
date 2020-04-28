@@ -844,7 +844,6 @@ class MyUI(FloatLayout):
             try:
                 SLAY_BOSSES.remove(self.defeated_boss)
                 self.defeated_boss = ''
-                print(SLAY_BOSSES)
             except:
                 pass
         self.adv_case.text = ''
