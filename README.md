@@ -1,5 +1,6 @@
 # Dungeons & Dragons Board Games - Campaign Generator
 This app is used to generate a campaign using the D&D Board Games by Wizards of the Coast. Currently it is available in Android and Windows. More information can be found here: https://boardgamegeek.com/filepage/197252/beta-dungeons-and-dragons-board-games-adventure-ge
+and https://boardgamegeek.com/thread/2377499/wip-dungeons-and-dragons-board-games-adventure-gen .
 
 Download from: https://github.com/vasalpa/dnd_campaign_generator/releases .
 For the Windows version download the .zip file. For the android one download the .apk and install it on your android device!
