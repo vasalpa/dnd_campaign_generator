@@ -179,38 +179,7 @@ prompt_heroes.content = gridforpop
 
 
 #Help Pop and values
-text = 'Dungeons and Dragons - Campaign Generator is unofficial' \
-       ' Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials ' \
-       'used are property of Wizards of the Coast. ©Wizards of the Coast LLC.\n\nThis app simulates a campaign using the ' \
-       'Dungeons and Dragons board games by Wizards of the Coast.\nInstructions:' \
-       ' \n1) Press "Create Campaign" to automatically generate the first adventure of your campaign. First you have to ' \
-       'choose the board games that you would like to use for the campaign and then you will be asked to choose the heroes ' \
-       'that you would like to have for the entire campaign. You can choose up to 4 heroes. If you choose none, then the ' \
-       'app will generate 4 random heroes for you.\n2) Follow the instructions on the adventure case on the bottom left ' \
-       'of the screen. There are currently 7 types of adventures: \ni) Slay Monsters - where you need to slay x number of' \
-       ' a specific species of monsters. \nii) Save Villager - where you need to rescue an innocent, which means when you' \
-       ' find him on the trigger tile (the tile placed between the 9th and 12th tile in the dungeon stack), you need to' \
-       'carry him all the way to the starting tile.\niii) Rescue Ally - where you need to save one of your allies. Works' \
-       'the same way as the Save Villager except when you find the trigger tile you connect it with an extra tile and add ' \
-       '3 monsters on this extra tile. You can use the ally card for this ally if you have it. You need to slay every ' \
-       'monster to win this adventure.\niv) Reclaim Item - where you need to reclaim the specific item listed (which means' \
-       ' that you will own it after completing the adventure). When you reveal the trigger tile you connect it with an ' \
-       'extra one and put the item on this new extra tile along with any monsters/traps that both tiles have. To win just ' \
-       'kill every monster and end your turn on the tile with the item (the extra tile).\nv) Destroy Item - where you reveal' \
-       ' the item with the trigger tile and you attack it as though it were a monster. You draw monsters/traps as usual ' \
-       'and you win when you destroy the item.\nvi) Slay Villain(s) - where you reveal the villain(s) on the trigger tile ' \
-       'and you win when you defeat them.\nvii) Kill Boss - where you reveal the boss(es) on the extra tile which is ' \
-       'connected to the trigger tile and you win when you kill them.\n3) After you succeed in the adventure you can press' \
-       ' the "Next Adventure" button to start the next adventure and so on. If you decide to take a break, you can press' \
-       '"Save" so that the app saves the current state of the campaign. Press "Load" when you want to restore the campaign' \
-       ' that you saved.\n4) When you start a new adventure you need to follow the instructions listed on Deck Changes, ' \
-       'if you can\'t follow one, just adjust as you see fit.\n5) Gold and Items are just notepads for you to note each ' \
-       'of these things for each hero.\n6) The Tools button is used for a few things. LVL Up is used to level up the heroes' \
-       ' that you want to. Leveling costs 2000 for LVL-2, 3000 for LVL-3 and 4000 for LVL-4. You can also roll a D20 ' \
-       'if you feel like it! Monster tokens could be used at the exploration phase for the first three board games, to let' \
-       ' you know how many monsters you should place it the new tile.\n\nVillain Rules: Due to many board games in the series, the difficulty is not adjusted correctly. ' \
-       'This happens because earlier games in the series were not supposed to be played as a campaign. ' \
-       'To counter this, Villains will get three difficulty versions: [EASY], [NORMAL] and [HARD]. You can see the villain changes for each version in the villains manual.'
+text = open('help_tab.txt', 'r').read()
 help = Popup(title='Help', separator_color=[0, 100 / 255, 0, 1], size_hint=(.75, .75))
 # help_text = TextInput(text=text, multiline=True, disabled=True, background_color=[0,0,0,0], disabled_foreground_color=[1,1,1,1], size_hint_y=None)
 help_text = Label(text=text,size_hint_y=None,markup=True,halign='left', valign='bottom')
@@ -223,63 +192,8 @@ help.content = some_scroll
 
 #Villain Manual Pop-up
 villain = Popup(title='Villains Manual', separator_color=[0, 100 / 255, 0, 1], size_hint=(.75, .75), title_size= '16sp')
-some_text = '[size=22sp][b]Wrath of Ashardalon[/b][' \
-            '/size]\n\n[size=18sp][color=#c138e7][b][u]1) Ashardalon, ' \
-            'Red Dragon[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: AC:15, HP:10, Tactics: Same as ' \
-            'Card.\n[' \
-            'color=#edde37][NORMAL][/color]: Same as Card.\n[color=#ff0000][HARD][/color]: AC:17, HP:20, ' \
-            'Tactics: 1) TAIL SWEEP: 2 DMG + EFFECT, 2) BITE: 2DMG + EFFECT.\n[color=#ae0606][EXTREME][/color]: ' \
-            'AC: 18, HP:27, TACTICS: 1) TAIL SWEEP: +12, 2 DMG + EFFECT, 2) BITE: +12, 2DMG + EFFECT.' \
-            '\n\n[size=18sp][color=#c138e7][b][u]2) Bellax, ' \
-            'Gauth[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: Same as Card.\n[' \
-            'color=#edde37][NORMAL][/color]: AC:17, HP:14, TACTICS: Same as Card.\n[color=#ff0000][HARD][/color]: ' \
-            'AC:17, HP:20, TACTICS: + 1 DMG TO ALL TACTICS.\n[color=#ae0606][EXTREME][/color]: ' \
-            'AC:18, HP:24, TACTICS: +1 DMG TO ALL TACTICS, +10 ATTACK TO ALL TACTICS.' \
-            '\n\n[size=18sp][color=#c138e7][b][u]3) Rage ' \
-            'Dragon[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: Same as Card.\n[' \
-            'color=#edde37][NORMAL][/color]: RAGED: AC:14, HP:9, TACTICS: SAME AS CARD, ENRAGED RAGE: AC:16, HP:12, ' \
-            'TACTICS: Same as Card.\n[color=#ff0000][HARD][/color]: ' \
-            'RAGED: AC:14, HP:11, TACTICS: BITE: 2DMG + EFF, CHARGE: 2DMG + DAZED, ENRAGED RAGE: AC: 16, HP:14, ' \
-            'TACTICS: CLAWS: 3DMG + EFF.\n[color=#ae0606][EXTREME][/color]: ' \
-            'RAGED: AC:15, HP:12, TACTICS: BITE: 2DMG + EFF, CHARGE: 2DMG + DAZED, ENRAGED RAGE: AC: 17, HP:16, TACTICS: CLAWS: 3DMG + EFF.' \
-            '\n\n[size=18sp][color=#229fed][u]4) Kraash, Orc Storm Shaman[/u][' \
-            '/color][/size]\n[color=#1fed2d][EASY][/color]: Same as Card.\n[color=#edde37][' \
-            'NORMAL][/color]: AC:15, HP:10, TACTICS: Same as Card.\n[color=#ff0000][HARD][/color]: AC:16, HP:14, TACTICS: WINDSTORM: 2DMG + EFF, LIGHTNING: 2DMG + EFF\n\n[' \
-            'size=18sp][color=#229fed][u]5) Meerak, Kobold Dragonlord[/u][/color][/size]\n[color=#1fed2d][EASY][/color]: ' \
-            'Same as Card.\n[color=#edde37][NORMAL][/color]: AC:18, HP:9, TACTICS: Same as Card.\n[color=#ff0000][' \
-            'HARD][/color]: AC:18, HP:12, TACTICS: SHORT SWORD: 3DMG.\n\n[' \
-            'size=18sp][color=#229fed][u]6) Margrath, Duergar Captain[/u][/color][/size]\n[color=#1fed2d][EASY][' \
-            '/color]: ' \
-            'Same as Card.\n[color=#edde37][NORMAL][/color]: AC:17, HP:11, TACTICS: Same as Card.\n[color=#ff0000][' \
-            'HARD][/color]: AC:18:, HP:14, TACTICS: MORNING STAR: 2DMG + EFF, QUILLS: 2DMG + EFF.\n\n[' \
-            'size=18sp][color=#229fed][u]7) Otyugh[/u][/color][/size]\n[color=#1fed2d][EASY][' \
-            '/color]: ' \
-            'Same as Card.\n[color=#edde37][NORMAL][/color]: AC:15, HP: 14, TACTICS: Same as Card.\n[color=#ff0000][' \
-            'HARD][/color]: AC:16, HP:17, TACTICS: TENTACLE: 2DMG + EFF.\n\n[size=22sp][b]The Legend of Drizzt[/b][/size]\n\n[size=18sp][color=#c138e7][b][u]1) Errtu, ' \
-            'Balor[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: AC:14, HP:10, Tactics: Same as Card.\n[' \
-            'color=#edde37][NORMAL][/color]: Same as Card.\n[color=#ff0000][HARD][/color]: AC:16, HP:25, ' \
-            'Tactics: 1) SWORD: +10 + IMMOBILIZED, 2) WHIP: +9, 2DMG + EFFECT.\n[color=#ae0606][EXTREME][/color]: AC: 17, HP:28, TACTICS: 1) SWORD: +11 + IMMOBILIZED, 2) WHIP: +10, 2DMG + EFFECT.' \
-            '\n\n[size=18sp][color=#c138e7][b][u]2) ' \
-            'Shimmergloom, Shadow Dragon[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: Same as Card\n[' \
-            'color=#edde37][NORMAL][/color]: AC:15, HP: 20, TACTICS: 1) CLAWS: +9, 2DMG + EFFECT, 2) BREATH: +10.\n[' \
-            'color=#ff0000][HARD][/color]: AC: 16, HP:23, TACTICS: 1) CLAWS: +10, 2DMG + EFFECT, 2) BREATH: +10, ' \
-            '2 DMG + IMMOBILIZED.\n[color=#ae0606][EXTREME][/color]: AC: 16, HP:25, TACTICS: 1) CLAWS: +10, ' \
-            '2DMG + EFFECT, 2) BREATH: +10, 2 DMG + IMMOBILIZED, PASSIVE: Whenever Shimmergloom defeats a hero, he gains a permanent +1 AC.\n\n[size=18sp][color=#c138e7][b][u]3) Yvonnel ' \
-            'Baenre, Matron Mother[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]:Same as Card.\n[' \
-            'color=#edde37][NORMAL][/color]:AC:14, HP:14, TACTICS:Same as Card.\n[color=#ff0000][HARD][/color]: ' \
-            'AC:15, HP:22, TACTICS: 1) DAGGER: 2 + POISONED, 2) BLAST OF FIRE: 3 + EFFECT(MISS:1DMG).\n[' \
-            'color=#ae0606][EXTREME][/color]: AC:15, HP:27, TACTICS: 1) DAGGER: 3+POISONED, 2) BLAST OF FIRE: ' \
-            '3+EFFECT(MISS:1DMG).\n\n[size=18sp][color=#229fed][u]4) Yochlol, Handmaiden of Lolth[/u][' \
-            '/color][/size]\n[color=#1fed2d][EASY][/color]: Same as Card.\n[color=#edde37][' \
-            'NORMAL][/color]: AC: 14, HP: 18, TACTICS: 1) IF IT HAS 9 OR FEWER HP FLIP THE CARD.\n[color=#ff0000][HARD][/color]: AC: 15, HP: 22, TACTICS: 1) IF IT HAS 11 OR FEWER HP FLIP THE CARD\n\n[' \
-            'size=18sp][color=#229fed][u]5) Methil El-Viddenvelp[/u][/color][/size]\n[color=#1fed2d][EASY][/color]: ' \
-            'Same as Card.\n[color=#edde37][NORMAL][/color]: AC: 13, HP: 14.\n[color=#ff0000][' \
-            'HARD][/color]: AC: 14, HP:20.\n\n[size=18sp][color=#229fed][u]6) Artemis Entreri[' \
-            '/u][/color][/size]\n[color=#1fed2d][EASY][/color]: Same as Card.\n[color=#edde37][NORMAL][/color]: ' \
-            'AC:16, HP: 14.\n[color=#ff0000][HARD][/color]: AC:16, HP: 21.\n\n[size=18sp][color=#229fed][u]7) Jarlaxe Baenre[/u][' \
-            '/color][/size]\n[color=#1fed2d][EASY][/color]: Same as Card.\n[color=#edde37][NORMAL][/color]: AC: 16, ' \
-            'HP: 14.\n[color=#ff0000][HARD][/color]: AC: 17, HP: 20.'
-some_other_text = '[size=22sp][b]Waterdeep - Dungeon of the Mad Mage[/b][/size]\n\n[size=18sp][color=#c138e7][b][u]1) Zalthar Shadowdusk[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: AC: 16, HP: 12, TACTICS: 1) NINE LIVES STEALER: +8 , WEAKEN 2.\n[color=#edde37][NORMAL][/color]: AC: 17, HP: 18, TACTICS: 1)NINE LIVES STEALER: +9, WEAKEN 2.\n[color=#ff0000][HARD][/color]: Same as Card.\n[color=#ae0606][EXTREME][/color]: AC: 17, HP: 29, TACTICS: Same as Card.\n\n[size=18sp][color=#c138e7][b][u]2) Dezmyr Shadowdusk[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: AC:15, HP: 6, TACTICS: 1) DEATH TOUCH: 2DMG(1 MISS).\n[color=#edde37][NORMAL][/color]: AC:16, HP: 9, TACTICS: 1)DEATH TOUCH: 3DMG(1 MISS).\n[color=#ff0000][HARD][/color]: Same as Card.\n[color=#ae0606][EXTREME][/color]: AC: 16, HP: 15, TACTICS: Same as Card.\n\n[size=18sp][color=#c138e7][b][u]3) Arcturia[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: AC: 14, HP: 10, TACTICS: Remove 1st Tactic.\n[color=#edde37][NORMAL][/color]: AC: 15, HP: 17, TACTICS: Same as Card.\n[color=#ff0000][HARD][/color]: Same as Card.\n[color=#ae0606][EXTREME][/color]: AC: 16, HP: 26, TACTICS: SPURS +9\n\n[size=18sp][color=#c138e7][b][u]4) Halaster Blackcloak[/u][/b][/color][/size]\n[color=#1fed2d][EASY][/color]: AC: 13, HP: 12, TACTICS: Remove 1st and 2nd Tactic.\n[color=#edde37][NORMAL][/color]: AC 14, HP: 18, TACTICS: Remove 1st Tactic.\n[color=#ff0000][HARD][/color]: Same as Card.\n[color=#ae0606][EXTREME][/color]: AC: 15, HP: 27, TACTICS: Same as Card.\n\n[size=18sp][color=#229fed][u]5) Trobriand[/u][/color][/size]\n[color=#1fed2d][EASY][/color]: AC:12, HP: 11.\n[color=#edde37][NORMAL][/color]: Same as Card.\n[color=#ff0000][HARD][/color]: AC: 13, HP: 23, TACTICS: Same as Card. \n\n[size=18sp][color=#229fed][u]6) Muiral[/u][/color][/size]\n[color=#1fed2d][EASY][/color]: AC:13, HP:9.\n[color=#edde37][NORMAL][/color]: Same as Card.\n[color=#ff0000][HARD][/color]: AC: 14, HP: 19, TACTICS: Same as Card.\n\n[size=18sp][color=#229fed][u]7) Great Gray Ooze[/u][/color][/size]\n[color=#1fed2d][EASY][/color]: AC:15, HP: 10.\n[color=#edde37][NORMAL][/color]: Same as Card.\n[color=#ff0000][HARD][/color]: AC: 17, HP: 22, TACTICS: Same as Card.'
+some_text = open('villains_tab_a.txt', 'r').read()
+some_other_text = open('villains_tab_b.txt', 'r').read()
 villain_grid = GridLayout(cols=2)
 villain_label = Label(text=some_text,size_hint_y=None,markup=True,halign='left', valign='bottom')
 villain_label.text_size = ((Window.width*.6)/2, None)

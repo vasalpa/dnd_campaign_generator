@@ -1,0 +1,37 @@
+[size=22sp][b]Waterdeep - Dungeon of the Mad Mage[/b][/size]
+[size=18sp][color=#c138e7][b][u]1) Zalthar Shadowdusk[/u][/b][/color][/size]
+[color=#1fed2d][EASY][/color]: AC: 16, HP: 12, TACTICS: 1) NINE LIVES STEALER: +8 , WEAKEN 2.
+[color=#edde37][NORMAL][/color]: AC: 17, HP: 18, TACTICS: 1)NINE LIVES STEALER: +9, WEAKEN 2.
+[color=#ff0000][HARD][/color]: Same as Card.    [color=#ae0606][EXTREME][/color]: AC: 17, HP: 29, TACTICS: Same as Card.
+
+[size=18sp][color=#c138e7][b][u]2) Dezmyr Shadowdusk[/u][/b][/color][/size]
+[color=#1fed2d][EASY][/color]: AC:15, HP: 6, TACTICS: 1) DEATH TOUCH: 2DMG(1 MISS).
+[color=#edde37][NORMAL][/color]: AC:16, HP: 9, TACTICS: 1)DEATH TOUCH: 3DMG(1 MISS).
+[color=#ff0000][HARD][/color]: Same as Card.
+[color=#ae0606][EXTREME][/color]: AC: 16, HP: 15, TACTICS: Same as Card.
+
+[size=18sp][color=#c138e7][b][u]3) Arcturia[/u][/b][/color][/size]
+[color=#1fed2d][EASY][/color]: AC: 14, HP: 10, TACTICS: Remove 1st Tactic.
+[color=#edde37][NORMAL][/color]: AC: 15, HP: 17, TACTICS: Same as Card.
+[color=#ff0000][HARD][/color]: Same as Card.    [color=#ae0606][EXTREME][/color]: AC: 16, HP: 26, TACTICS: SPURS +9
+
+[size=18sp][color=#c138e7][b][u]4) Halaster Blackcloak[/u][/b][/color][/size]
+[color=#1fed2d][EASY][/color]: AC: 13, HP: 12, TACTICS: Remove 1st and 2nd Tactic.
+[color=#edde37][NORMAL][/color]: AC 14, HP: 18, TACTICS: Remove 1st Tactic.
+[color=#ff0000][HARD][/color]: Same as Card.
+[color=#ae0606][EXTREME][/color]: AC: 15, HP: 27, TACTICS: Same as Card.
+
+[size=18sp][color=#229fed][u]5) Trobriand[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: AC:12, HP: 11.
+[color=#edde37][NORMAL][/color]: Same as Card.
+[color=#ff0000][HARD][/color]: AC: 13, HP: 23, TACTICS: Same as Card.
+
+[size=18sp][color=#229fed][u]6) Muiral[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: AC:13, HP:9.
+[color=#edde37][NORMAL][/color]: Same as Card.
+[color=#ff0000][HARD][/color]: AC: 14, HP: 19, TACTICS: Same as Card.
+
+[size=18sp][color=#229fed][u]7) Great Gray Ooze[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: AC:15, HP: 10.
+[color=#edde37][NORMAL][/color]: Same as Card.
+[color=#ff0000][HARD][/color]: AC: 17, HP: 22, TACTICS: Same as Card.

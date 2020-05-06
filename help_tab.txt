@@ -1,0 +1,18 @@
+Dungeons and Dragons - Campaign Generator is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
+ 
+This app simulates a campaign using the Dungeons and Dragons board games by Wizards of the Coast.
+Instructions: 
+1) Press "Create Campaign" to automatically generate the first adventure of your campaign. First you have to choose the board games that you would like to use for the campaign and then you will be asked to choose the heroes that you would like to have for the entire campaign. You can choose up to 4 heroes. If you choose none, then the app will generate 4 random heroes for you.
+2) Follow the instructions on the adventure case on the bottom left of the screen. There are currently 7 types of adventures:
+      i) Slay Monsters - where you need to slay x number of a specific species of monsters.
+      ii) Save Villager - where you need to rescue an innocent, which means when you find him on the trigger tile (the tile placed between the 9th and 12th tile in the dungeon stack), you need to carry him all the way to the starting tile.
+      iii) Rescue Ally - where you need to save one of your allies. Works the same way as the Save Villager except when you find the trigger tile you connect it with an extra tile and add 3 monsters on this extra tile. You can use the ally card for this ally if you have it. You need to slay every monster to win this adventure.
+      iv) Reclaim Item - where you need to reclaim the specific item listed (which means that you will own it after completing the adventure). When you reveal the trigger tile you connect it with an extra one and put the item on this new extra tile along with any monsters/traps that both tiles have. To win just kill every monster and end your turn on the tile with the item (the extra tile).
+      v) Destroy Item - where you reveal the item with the trigger tile and you attack it as though it were a monster. You draw monsters/traps as usual and you win when you destroy the item.
+      vi) Slay Villain(s) - where you reveal the villain(s) on the trigger tile and you win when you defeat them.nvii) Kill Boss - where you reveal the boss(es) on the extra tile which is connected to the trigger tile and you win when you kill them.
+3) After you succeed in the adventure you can press the "Next Adventure" button to start the next adventure and so on. If you decide to take a break, you can press "Save" so that the app saves the current state of the campaign. Press "Load" when you want to restore the campaign that you saved.
+4) When you start a new adventure you need to follow the instructions listed on Deck Changes, if you cant follow one, just adjust as you see fit.
+5) Gold and Items are just notepads for you to note each of these things for each hero.
+6) The Tools button is used for a few things. LVL Up is used to level up the heroes that you want to. Leveling costs 2000 for LVL-2, 3000 for LVL-3 and 4000 for LVL-4. You can also roll a D20  if you feel like it! Monster tokens could be used at the exploration phase for the first three board games, to let you know how many monsters you should place it the new tile.
+
+Villain Rules: Due to many board games in the series, the difficulty is not adjusted correctly. This happens because earlier games in the series were not supposed to be played as a campaign. To counter this, Villains will get three difficulty versions: [EASY], [NORMAL] and [HARD]. You can see the villain changes for each version in the villains manual.

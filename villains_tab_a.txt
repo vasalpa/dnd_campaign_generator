@@ -1,0 +1,78 @@
+    [size=22sp][b]Wrath of Ashardalon[/b][/size]
+[size=18sp][color=#c138e7][b][u]1) Ashardalon, Red Dragon[/u][/b][/color][/size]
+[color=#1fed2d][EASY][/color]: AC:15, HP:10, Tactics: Same as Card.
+[color=#edde37][NORMAL][/color]: Same as Card.
+[color=#ff0000][HARD][/color]: AC:17, HP:20, Tactics: 1) TAIL SWEEP: 2 DMG + EFFECT, 2) BITE: 2DMG + EFFECT.
+[color=#ae0606][EXTREME][/color]: AC: 18, HP:27, TACTICS: 1) TAIL SWEEP: +12, 2 DMG + EFFECT, 2) BITE: +12, 2DMG + EFFECT.
+
+[size=18sp][color=#c138e7][b][u]2) Bellax, Gauth[/u][/b][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card.
+[color=#edde37][NORMAL][/color]: AC:17, HP:14, TACTICS: Same as Card.
+[color=#ff0000][HARD][/color]: AC:17, HP:20, TACTICS: + 1 DMG TO ALL TACTICS.
+[color=#ae0606][EXTREME][/color]: AC:18, HP:24, TACTICS: +1 DMG TO ALL TACTICS, +10 ATTACK TO ALL TACTICS.
+
+[size=18sp][color=#c138e7][b][u]3) Rage Dragon[/u][/b][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card.
+[color=#edde37][NORMAL][/color]: RAGED: AC:14, HP:9, TACTICS: SAME AS CARD, ENRAGED RAGE: AC:16, HP:12, TACTICS: Same as Card.
+[color=#ff0000][HARD][/color]: RAGED: AC:14, HP:11, TACTICS: BITE: 2DMG + EFF, CHARGE: 2DMG + DAZED, ENRAGED RAGE: AC: 16, HP:14, TACTICS: CLAWS: 3DMG + EFF.
+[color=#ae0606][EXTREME][/color]: RAGED: AC:15, HP:12, TACTICS: BITE: 2DMG + EFF, CHARGE: 2DMG + DAZED, ENRAGED RAGE: AC: 17, HP:16, TACTICS: CLAWS: 3DMG + EFF.
+
+[size=18sp][color=#229fed][u]4) Kraash, Orc Storm Shaman[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card.
+[color=#edde37][NORMAL][/color]: AC:15, HP:10, TACTICS: Same as Card.
+[color=#ff0000][HARD][/color]: AC:16, HP:14, TACTICS: WINDSTORM: 2DMG + EFF, LIGHTNING: 2DMG + EFF
+
+[size=18sp][color=#229fed][u]5) Meerak, Kobold Dragonlord[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card.
+[color=#edde37][NORMAL][/color]: AC:18, HP:9, TACTICS: Same as Card.
+[color=#ff0000][HARD][/color]: AC:18, HP:12, TACTICS: SHORT SWORD: 3DMG.
+
+[size=18sp][color=#229fed][u]6) Margrath, Duergar Captain[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card.
+[color=#edde37][NORMAL][/color]: AC:17, HP:11, TACTICS: Same as Card.
+[color=#ff0000][HARD][/color]: AC:18:, HP:14, TACTICS: MORNING STAR: 2DMG + EFF, QUILLS: 2DMG + EFF.
+
+[size=18sp][color=#229fed][u]7) Otyugh[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card.
+[color=#edde37][NORMAL][/color]: AC:15, HP: 14, TACTICS: Same as Card.
+[color=#ff0000][HARD][/color]: AC:16, HP:17, TACTICS: TENTACLE: 2DMG + EFF.
+
+[size=22sp][b]The Legend of Drizzt[/b][/size]
+
+[size=18sp][color=#c138e7][b][u]1) Errtu, Balor[/u][/b][/color][/size]
+[color=#1fed2d][EASY][/color]: AC:14, HP:10, Tactics: Same as Card.
+[color=#edde37][NORMAL][/color]: Same as Card.
+[color=#ff0000][HARD][/color]: AC:16, HP:25, Tactics: 1) SWORD: +10 + IMMOBILIZED, 2) WHIP: +9, 2DMG + EFFECT.
+[color=#ae0606][EXTREME][/color]: AC: 17, HP:28, TACTICS: 1) SWORD: +11 + IMMOBILIZED, 2) WHIP: +10, 2DMG + EFFECT.
+
+[size=18sp][color=#c138e7][b][u]2) Shimmergloom, Shadow Dragon[/u][/b][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card
+[color=#edde37][NORMAL][/color]: AC:15, HP: 20, TACTICS: 1) CLAWS: +9, 2DMG + EFFECT, 2) BREATH: +10.
+[color=#ff0000][HARD][/color]: AC: 16, HP:23, TACTICS: 1) CLAWS: +10, 2DMG + EFFECT, 2) BREATH: +10, 2 DMG + IMMOBILIZED.
+[color=#ae0606][EXTREME][/color]: AC: 16, HP:25, TACTICS: 1) CLAWS: +10, 2DMG + EFFECT, 2) BREATH: +10, 2 DMG + IMMOBILIZED, PASSIVE: Whenever Shimmergloom defeats a hero, he gains a permanent +1 AC.
+
+[size=18sp][color=#c138e7][b][u]3) Yvonnel Baenre, Matron Mother[/u][/b][/color][/size]
+[color=#1fed2d][EASY][/color]:Same as Card.
+[color=#edde37][NORMAL][/color]:AC:14, HP:14, TACTICS:Same as Card.
+[color=#ff0000][HARD][/color]: AC:15, HP:22, TACTICS: 1) DAGGER: 2 + POISONED, 2) BLAST OF FIRE: 3 + EFFECT(MISS:1DMG).
+[color=#ae0606][EXTREME][/color]: AC:15, HP:27, TACTICS: 1) DAGGER: 3+POISONED, 2) BLAST OF FIRE: 3+EFFECT(MISS:1DMG).
+
+[size=18sp][color=#229fed][u]4) Yochlol, Handmaiden of Lolth[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card.
+[color=#edde37][NORMAL][/color]: AC: 14, HP: 18, TACTICS: 1) IF IT HAS 9 OR FEWER HP FLIP THE CARD.
+[color=#ff0000][HARD][/color]: AC: 15, HP: 22, TACTICS: 1) IF IT HAS 11 OR FEWER HP FLIP THE CARD
+
+[size=18sp][color=#229fed][u]5) Methil El-Viddenvelp[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card.
+[color=#edde37][NORMAL][/color]: AC: 13, HP: 14.
+[color=#ff0000][HARD][/color]: AC: 14, HP:20.
+
+[size=18sp][color=#229fed][u]6) Artemis Entreri[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card.
+[color=#edde37][NORMAL][/color]: AC:16, HP: 14.
+[color=#ff0000][HARD][/color]: AC:16, HP: 21.
+
+[size=18sp][color=#229fed][u]7) Jarlaxe Baenre[/u][/color][/size]
+[color=#1fed2d][EASY][/color]: Same as Card.
+[color=#edde37][NORMAL][/color]: AC: 16, HP: 14.
+[color=#ff0000][HARD][/color]: AC: 17, HP: 20.    
